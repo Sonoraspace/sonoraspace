@@ -1,0 +1,252 @@
+/* Import Font Metropolis */
+
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a4483f3da961775614_Metropolis-Bold.woff') format('woff'), url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a45e97250ff08c9abb_Metropolis-ExtraBold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a449c9ed8a6ea72141_Metropolis-Black.woff') format('woff');
+        font-weight: 900;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a45e9725bbe48c9aba_Metropolis-BlackItalic.woff') format('woff');
+        font-weight: 900;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a4901b473fab0738f9_Metropolis-BoldItalic.woff') format('woff'), url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a4483f3d046f775615_Metropolis-ExtraBoldItalic.woff') format('woff');
+        font-weight: 700;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a43ddc131f44dd4e65_Metropolis-ExtraLight.woff') format('woff');
+        font-weight: 200;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a43ddc13d6a9dd4e66_Metropolis-ExtraLightItalic.woff') format('woff');
+        font-weight: 200;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a4901b4753510738fa_Metropolis-Medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a43ddc136997dd4e67_Metropolis-LightItalic.woff') format('woff');
+        font-weight: 300;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a43ddc130e40dd4e68_Metropolis-RegularItalic.woff') format('woff');
+        font-weight: 400;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a43ddc13cb5edd4e69_Metropolis-SemiBoldItalic.woff') format('woff');
+        font-weight: 600;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a45e97257b0b8c9b9f_Metropolis-ThinItalic.woff') format('woff');
+        font-weight: 100;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a4901b478ef10738fb_Metropolis-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a45e972583158c9abd_Metropolis-MediumItalic.woff') format('woff');
+        font-weight: 500;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a449c9ed58f9a72143_Metropolis-SemiBold.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a45e9725a9238c9abc_Metropolis-Light.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Metropolis';
+        src: url('https://uploads-ssl.webflow.com/5e3c1276f9bdda556bbbe992/5e4084a449c9ed3f26a72144_Metropolis-Thin.woff') format('woff');
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    .marketplace-lander-content-title {font-family: 'Metropolis', serif;}
+    .marketplace-lander .marketplace-lander-content-description {font-family: 'Metropolis', helvetica, sans-serif;}
+    .fluid-thumbnail-grid-image-title {font-family: 'Metropolis', helvetica, sans-serif;}
+    h1 {font-family: 'Metropolis', helvetica, sans-serif;}
+    .page-content p, .toggle-header, .home-toolbar-button-text, .selected.home-categories-main, .custom-filter-title, .custom-filter-checkbox-label-text, button, .listing-price-amount, .field label, .text-part, b, .listing-details-container, .listing-author-name-link,
+    .listing-author-contact-button .content, .listing-author-activity-item, .AddNewListingButton,
+    .MenuPriority__priorityLink__moBbL, .home-no-listings, .left-navi .left-navi-link-text, .fluid-thumbnail-grid-image-price, .home-fluid-thumbnail-grid-author-name, h2
+    {font-family: 'Metropolis', helvetica, sans-serif;}
+    .Menu__menuLabel__17fat {font-family: 'Metropolis', helvetica, sans-serif;}
+    .Topbar__topbar__7GUWt input {font-family: 'Metropolis', helvetica, sans-serif;}
+
+    a.home-toolbar-button-group-button[title="List"] {display:none;}
+
+    /* This hides FB and Twitter sharing buttons on listing pages */
+    .listing-social {display:none;}
+
+    /* Listing background is white */
+    .listing-image-frame {background-color:#fff}
+
+    /* Cover-image no display */
+    .coverimage {display: flex}
+    .marketplace-lander .coverimage-fade {background:rgba(232,232,232,0.25)}
+    .marketplace-lander figure.marketplace-cover {display: none}
+
+
+    /* No divider between profile info & listing */
+    .row-with-divider {border-bottom: 0px solid #c3c3c3}
+
+    /* Show only selected genre */
+    @media (max-width: 48em){.checkbox-option.not-selected {display:none}}
+
+    /* Changed Grid Layout */
+
+    .fluid-thumbnail-grid-image-image {
+        height: 280px;
+        object-fit: cover;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .fluid-thumbnail-grid-image-image-container {height: 280px}
+    .fluid-thumbnail-grid-image-title {
+        font-weight: 600;
+        top: 210px;
+        color: #fff;
+        z-index: 100
+    }
+    .fluid-thumbnail-grid-image-overlay {border-radius: 0px}
+    .home-fluid-thumbnail-grid-author-name {display: none}
+    .home-fluid-thumbnail-grid-author-avatar-image {display: none}
+    .home-fluid-thumbnail-grid-author {display: none}
+
+
+    /* Hide Grid Button */
+    .home-toolbar-button-group-button.selected, .home-toolbar-show-filters-button.selected {display: none}
+
+    /* Round Price Filter */
+    .noUi-handle {
+        border-radius: 100px;
+        background: #000;
+    }
+
+    /* Round Buttons */
+    button, .button, .big-button, .inline-big-button, .tribe-actions, .marketplace-lander button.action-button, .noUi-connect, .pagination .current, .toggle-menu a:hover, .toggle-menu .toggle-menu-link:hover, .badge, .enabled-book-button, .disabled-book-button, .message-book-button, .listing-shape-delete-button, .status-select-line.selected {
+        border-radius: 20px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+    }
+
+
+    /* Hidden home devider */
+    .home-toolbar {
+        border-bottom: 0px solid #c3c3c3;
+    }
+
+    /* Price tag - Alternate version */
+    .fluid-thumbnail-grid-image-price-container {
+        top: 250px;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+    .fluid-thumbnail-grid-image-price {font-size: 12px}
+
+
+    /* Fixed buy button on mobile devices */
+    @media (min-width: 48em){.col-4 {
+        position: relative;
+        width: 33.33333%
+    }}
+    @media (max-width: 48em){.col-4 {
+        width: 95%;
+        position: fixed;
+        bottom: 0px;
+        padding: 15px;
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 0px;
+        padding-left: 15px;
+        background-color: #fff;
+    }}
+    @media (max-width: 48em){.checkbox-group .col-4{
+        margin-bottom: 0;
+        position: relative;
+        padding: 0px;
+    }}
+    .quantity-input input {border-radius: 0px}
+
+    .enabled-book-button {background-image: linear-gradient(31deg,#e54567 34%,#fa7831)}
+    .enabled-book-button .content {font-size: 20px;
+        font-weight: 500;}
+
+    /* Flash text - new font family*/
+    .ajax-notification .ajax-text, .ajax-notification .flash-text, .flash-notification .ajax-text, .flash-notification .flash-text {
+        font-family: 'Metropolis';
+        font-size: 15px;
+    }
+
+    /* Label text - new font family */
+    .label, label {font-family: 'Metropolis'}
+    .left-navi-section small {font-family: 'Metropolis'}
+    .sort-text {font-family: 'Metropolis'}
+    .undo-mobile-wrapper-margin {font-family: 'Metropolis'}
+
+    /* Different background for flash notice */
+    .ajax-notice, .ajax-warning, .flash-notice, .flash-warning, .ajax-update-notice {background: #ececec}
+
+    /* Change Filter mobile-button */
+    .home-toolbar-show-filters-button-container {
+        font-family: 'Metropolis';
+        font-weight: 500;
+    }
+    .home-toolbar-show-filters-button {
+        border-radius: 0px;
+        color: #fff;
+        background: #000000e6;
+    }
+
+    /* Profile image + name no display on Listing */
+    .listing-author {display: none}
+
+    /* Filter without a divider */
+    .custom-filter-title {border-bottom: 0px solid #e8e8e8}
+
+#filters button{
+    display: inline-block;
+}
+.featherlight .featherlight-close-icon{
+    border-radius: 0;
+}
