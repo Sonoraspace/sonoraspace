@@ -250,3 +250,9 @@
 .featherlight .featherlight-close-icon{
     border-radius: 0;
 }
+
+#filter-clear-homepage{
+    border: 1px solid black;
+    background-color: #fff;
+    color: #000;
+}
