@@ -256,3 +256,37 @@
     background-color: #fff;
     color: #000;
 }
+
+/*Change style of transaction elements*/
+
+.no-bullets {font-family: 'Metropolis'}
+.initiate-transaction-totals {
+background-color: #f3f3f3;
+font-family: 'Metropolis'
+}
+
+.conversation-status .status-links {
+font-family: 'Metropolis';
+font-size: 15px;
+font-weight: 600;
+}
+
+.message-time-ago, .message-time-ago-left, .message-time-ago-right {
+font-family: 'Metropolis';
+font-size: 15px;
+}
+
+.message-avatar-image {border-radius: 100px;}
+
+#submit-payment-form-link {
+display: none; 
+}
+
+.centered-section, .centered-section-wide, .centered-section-narrow {
+font-family: 'Metropolis';
+font-size: 15px;
+}
+
+.conversation-title-link, .conversation-title-link-unread {font-weight: 600;
+text-decoration: underline; 
+}
