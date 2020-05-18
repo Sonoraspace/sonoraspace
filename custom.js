@@ -5,6 +5,7 @@ $(document).ready(function () {
     hideAvailabilityLink();
     hideYoutubeLink();
     displaySessionSelectBoxOnCheckout();
+    displaySelectTimeSlotButton();
     changeTextOfQuantity();
 
     function addClearButton() {
@@ -101,7 +102,7 @@ $(document).ready(function () {
         var selectedQuantity = parseInt($(".initiate-transaction-quantity-value").text())
         var correctedQuantity = -1;
 
-        if(selectedQuantity == NaN){
+        if(Number.isNaN(selectedQuantity)){
             correctedQuantity = 1; // Sharetribe hides the quantity if 1.
         }
         if (selectedQuantity==2) {
@@ -110,11 +111,10 @@ $(document).ready(function () {
         return correctedQuantity;
     }
 
-    displaySelectTimeSlotButton();
     function displaySelectTimeSlotButton() {
-        if($("#transaction_status .confirm").length > 1){
+        if($("#transaction_status .confirm").length == 1){
             var link = availabilityLink(quantity());
-            $('<div><a href="'+ link +'" id="displayCalenderPopup" data-featherlight="iframe" style="color: #fff; background: red; display: block;" data-featherlight-iframe-height="80vh"  class="display-calender-popup button">Select time slot</a></div>').insertAfter($('.inbox-horizontally-aligned-status')[0]);
+            $('<div><a href="'+ link +'" id="displayCalenderPopup" data-featherlight="iframe" style="color: #fff; background: red; display: block;"  class="display-calender-popup button">Select time slot</a></div>').insertAfter($('.inbox-horizontally-aligned-status')[0]);
             $('<div><a href="'+ link +'" id="displayCalenderPopup1" target="_blank" style="color: #fff; background: red; display: block;"  class="display-calender-popup button">Select time slot</a></div>').insertAfter($('#displayCalenderPopup'));
         }
 
