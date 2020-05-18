@@ -1,0 +1,79 @@
+<style>
+.submit-payment-form-link, .hide{display:none;}
+.listing-price-amount {font-size: 30px}
+.div.no-bullets {display:none;}
+.message-bubble, .message-bubble-arrow-to-left, .message-bubble-arrow-to-right {background: #f3f3f3;}
+.listing-author-activity {display: none;}
+form .checkbox-container a {text-decoration: underline;}
+.listing-image-thumbnail {border-radius: 100px;}
+
+#booking-dates #quantity{
+    width: 1px;
+    height: 0;
+    min-height: 0;
+    padding: 0;
+    visibility: hidden;
+}
+select#sessionLength{
+    height: 40px;
+    font-weight: 600;
+}
+</style>
+
+<script> 
+window.onload = function() {
+   var optionaltext_div = document.querySelector('form#transaction-form .preauthorize-section > h2');
+   if (optionaltext_div != null) {
+      optionaltext_div.insertAdjacentHTML( 'afterend', '<p>Please note this before contacting us</p>' );
+   }
+};
+
+window.addEventListener('DOMContentLoaded', hideCalendlytext);
+function hideCalendlytext() {
+
+var rows = document.getElementsByClassName("col-12");
+
+	for (var i = 0; i < rows.length; i++) {
+		if (rows[i].innerText.match(/calendly link/i)) {
+			var calendlyURL = rows[i].innerText.match(/https:\/\/calendly\.com\/\S+/i)[0];
+			rows[i].innerHTML = "";
+		}
+	}
+}
+</script>
+
+
+
+
+
+
+
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5eadda15203e206707f8f8b4/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+
+<link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+<link rel="stylesheet" type="text/css" href="https://rawcdn.githack.com/Sonoraspace/sonoraspace/455d7ae/custom.css">
+
+<script src="https://rawcdn.githack.com/Sonoraspace/sonoraspace/50cd7d2/content.js"></script>
+<script src="https://rawcdn.githack.com/Sonoraspace/sonoraspace/263755e/custom.js"></script>
