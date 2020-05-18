@@ -4,6 +4,8 @@ $(document).ready(function () {
     addDescriptions();
     hideAvailabilityLink();
     hideYoutubeLink();
+    displaySessionSelectBoxOnCheckout();
+    changeTextOfQuantity();
 
     function addClearButton() {
         if ($("#filters").length) {
@@ -48,7 +50,6 @@ $(document).ready(function () {
     }
 
     function hideAvailabilityLink() {
-
         if ($(".listing-details-container").length) {
             $("b").each(function () {
                 if ($(this).text() == '30 mins - Availability calendar:' || $(this).text() == '1h - Availability calendar:') {
@@ -70,8 +71,6 @@ $(document).ready(function () {
         }
 
     }
-
-    displaySessionSelectBoxOnCheckout();
 
     function displaySessionSelectBoxOnCheckout() {
         if ($("#booking-dates").length) {
@@ -113,9 +112,18 @@ $(document).ready(function () {
 
     displaySelectTimeSlotButton();
     function displaySelectTimeSlotButton() {
-        var link = availabilityLink(quantity());
-        $('<div><a href="'+ link +'" id="displayCalenderPopup" data-featherlight="iframe" style="color: #fff; background: red; display: block;" data-featherlight-iframe-height="80vh"  class="display-calender-popup button">Select time slot</a></div>').insertAfter($('.inbox-horizontally-aligned-status')[0]);
-        $('<div><a href="'+ link +'" id="displayCalenderPopup1" target="_blank" style="color: #fff; background: red; display: block;"  class="display-calender-popup button">Select time slot</a></div>').insertAfter($('#displayCalenderPopup'));
+        if($("#transaction_status .confirm").length > 1){
+            var link = availabilityLink(quantity());
+            $('<div><a href="'+ link +'" id="displayCalenderPopup" data-featherlight="iframe" style="color: #fff; background: red; display: block;" data-featherlight-iframe-height="80vh"  class="display-calender-popup button">Select time slot</a></div>').insertAfter($('.inbox-horizontally-aligned-status')[0]);
+            $('<div><a href="'+ link +'" id="displayCalenderPopup1" target="_blank" style="color: #fff; background: red; display: block;"  class="display-calender-popup button">Select time slot</a></div>').insertAfter($('#displayCalenderPopup'));
+        }
+
+    }
+
+    function changeTextOfQuantity(){
+        if(parseInt($(".initiate-transaction-quantity-value").text()) == 2){
+            $(".initiate-transaction-quantity-value").text("1 hr.")
+        }
 
     }
 
