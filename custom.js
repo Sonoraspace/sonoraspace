@@ -7,7 +7,8 @@ $(document).ready(function () {
     displaySessionSelectBoxOnCheckout();
     displaySelectTimeSlotButton();
     changeTextOfQuantity();
-
+    redirectForInvalidQuantity();
+    showInvalidQuantityMsg();
     function addClearButton() {
         if ($("#filters").length) {
             // Is homepage
@@ -19,6 +20,28 @@ $(document).ready(function () {
         }
     }
 
+    function redirectForInvalidQuantity(){
+        if($("#transaction-form").length == 1){
+            var quantity = parseInt(getUrlParameter('quantity'));
+            if(!Number.isNaN(quantity) && quantity > 2){
+                window.location.href = window.location.href.split("/initiate")[0] + '?quantity='+ quantity;
+            }
+        }
+    }
+
+    function showInvalidQuantityMsg(){
+        if($(".listing-details-container").length > 0){
+            var quantity = parseInt(getUrlParameter('quantity'));
+            if(!Number.isNaN(quantity) && quantity > 2){
+                $('<div class="flash-error flash-notification">\n' +
+                    '<div class="flash-icon ss-alert"></div>\n' +
+                    '<div class="flash-text">\n' +
+                    'Could not start a transaction, error message: Invalid session length.\n' +
+                    '</div>\n' +
+                    '</div>').prependTo(".wrapper");
+            }
+        }
+    }
 
     function addDescriptions() {
         if ($(".new-listing-form").length) {
@@ -114,8 +137,10 @@ $(document).ready(function () {
     function displaySelectTimeSlotButton() {
         if($("#transaction_status .confirm").length == 1){
             var link = availabilityLink(quantity());
-            $('<div><a href="'+ link +'" id="displayCalenderPopup" data-featherlight="iframe" style="color: #fff; background: red; display: block;"  class="display-calender-popup button">Select time slot</a></div>').insertAfter($('.inbox-horizontally-aligned-status')[0]);
+            $('<p style="margin-top: 10px;">1. Please select a time slot for your upcoming session.</p><div><a href="'+ link +'" id="displayCalenderPopup" data-featherlight="iframe" style="color: #fff; background: red; display: block;"  class="display-calender-popup button">Select time slot</a></div>').insertAfter($('.inbox-horizontally-aligned-status')[0]);
             $('<div><a href="'+ link +'" id="displayCalenderPopup1" target="_blank" style="color: #fff; background: red; display: block;"  class="display-calender-popup button">Select time slot</a></div>').insertAfter($('#displayCalenderPopup'));
+
+            $(".inbox-horizontally-aligned-status").last().html("<div>2. When your session was held via zoom, please click 'Mark completed'.</div>")
         }
 
     }
@@ -152,6 +177,21 @@ $(document).ready(function () {
         });
         return link;
     }
+
+    function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    };
 
 
 });
