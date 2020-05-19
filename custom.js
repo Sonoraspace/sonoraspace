@@ -9,6 +9,8 @@ $(document).ready(function () {
     changeTextOfQuantity();
     redirectForInvalidQuantity();
     showInvalidQuantityMsg();
+    hideAvailabilityFieldForNonAdmin();
+
     function addClearButton() {
         if ($("#filters").length) {
             // Is homepage
@@ -73,11 +75,39 @@ $(document).ready(function () {
         }
     }
 
+    function hideAvailabilityFieldForNonAdmin(){
+        if ($(".new-listing-form").length && $(".ProfileDropdown__adminLink__342Ug").length == 0) {
+            // Listing new/edit page
+            var formLoadingTimer1 = setInterval(checkIfFormLoaded, 200);
+
+            function checkIfFormLoaded() {
+                if ($("#listing_title").length > 0) {
+                    stopInterval();
+                    hideInputAndLabel();
+                }
+            }
+
+            function stopInterval() {
+                clearInterval(formLoadingTimer1);
+            }
+
+            function hideInputAndLabel() {
+                $("form label").each(function () {
+                    if ($(this).text() == '30 mins - Availability calendar' || $(this).text() == '1h - Availability calendar') {
+                        $('#' + $(this).attr("for")).hide();
+                        $(this).hide();
+                    }
+                });
+            }
+
+        }
+    }
+
     function hideAvailabilityLink() {
         if ($(".listing-details-container").length) {
             $("b").each(function () {
                 if ($(this).text() == '30 mins - Availability calendar:' || $(this).text() == '1h - Availability calendar:') {
-                    $(this).parent().parent().remove();
+                    $(this).parent().parent().hide();
                 }
             });
         }
@@ -169,12 +199,12 @@ $(document).ready(function () {
         var link = '';
         $(bodyListingPageContent).find(".listing-details-container b").each(function () {
             if (quanity == 1 && $(this).text() == '30 mins - Availability calendar:') {
-                link = $(this).parent().find("a").attr("href");
+                link = $(this).parent().html().replace('<b>' + $(this).text() + '</b>', '').replace(/(\r\n\t|\n|\r\t)/gm, "");
             }else if (quanity == 2 && $(this).text() == '1h - Availability calendar:') {
-                link = $(this).parent().find("a").attr("href");
+                link = $(this).parent().html().replace('<b>' + $(this).text() + '</b>', '').replace(/(\r\n\t|\n|\r\t)/gm, "");
             }
         });
-        return link;
+        return "https://calendar.sonoraspace.com/" + link;
     }
 
     function getUrlParameter(sParam) {
