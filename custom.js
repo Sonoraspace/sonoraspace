@@ -138,7 +138,6 @@ $(document).ready(function () {
         if($("#transaction_status .confirm").length == 1){
             var link = availabilityLink(quantity());
             $('<p style="margin-top: 10px;">1. Please select a time slot for your upcoming session.</p><div><a href="'+ link +'" id="displayCalenderPopup" data-featherlight="iframe" style="color: #fff; background: red; display: block;"  class="display-calender-popup button">Select time slot</a></div>').insertAfter($('.inbox-horizontally-aligned-status')[0]);
-            $('<div><a href="'+ link +'" id="displayCalenderPopup1" target="_blank" style="color: #fff; background: red; display: block;"  class="display-calender-popup button">Select time slot</a></div>').insertAfter($('#displayCalenderPopup'));
 
             $(".inbox-horizontally-aligned-status").last().html("<div>2. When your session was held via zoom, please click 'Mark completed'.</div>")
         }
