@@ -77,7 +77,7 @@ $(document).ready(function () {
         if ($(".listing-details-container").length) {
             $("b").each(function () {
                 if ($(this).text() == '30 mins - Availability calendar:' || $(this).text() == '1h - Availability calendar:') {
-                    $(this).parent().parent().hide();
+                    $(this).parent().parent().remove();
                 }
             });
         }
