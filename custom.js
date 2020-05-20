@@ -10,6 +10,10 @@ $(document).ready(function () {
     redirectForInvalidQuantity();
     showInvalidQuantityMsg();
     hideAvailabilityFieldForNonAdmin();
+    
+    function hideByListingByAuthor(){
+        $("#new_message_form .preauthorize-section .no-bullets li").first().hide();
+    }
 
     function addClearButton() {
         if ($("#filters").length) {
