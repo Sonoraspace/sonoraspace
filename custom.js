@@ -10,6 +10,7 @@ $(document).ready(function () {
     redirectForInvalidQuantity();
     showInvalidQuantityMsg();
     hideAvailabilityFieldForNonAdmin();
+    hideByListingByAuthor();
     
     function hideByListingByAuthor(){
         $("#new_message_form .preauthorize-section .no-bullets li").first().hide();
