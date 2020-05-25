@@ -191,15 +191,17 @@
         width: 33.33333%
     }}
     @media (max-width: 48em){.col-4 {
-        width: 95%;
+        width: 100%;
         position: fixed;
         bottom: 0px;
         padding: 15px;
         padding-top: 15px;
-        padding-right: 15px;
+        padding-right: 5%;
         padding-bottom: 0px;
-        padding-left: 15px;
+        padding-left: 5%;
         background-color: #fff;
+	left: 0px;
+	right: 0px;
     }}
     @media (max-width: 48em){.checkbox-group .col-4{
         margin-bottom: 0;
@@ -211,6 +213,47 @@
     .enabled-book-button {background-image: linear-gradient(31deg,#e54567 34%,#fa7831)}
     .enabled-book-button .content {font-size: 20px;
         font-weight: 500;}
+
+/*5% Padding for wrapper*/
+@media (max-width: 48em){.wrapper{
+padding-left: 5%;
+padding-right: 5%;
+}}
+
+/*Line height changes*/
+.page-content p {line-height: 1.6666666666666667em}
+.listing-details-container {line-height: 1.6666666666666667em}
+
+/*Additional changes*/
+.submit-payment-form-link, .hide{display:none;}
+.listing-price-amount {font-size: 30px}
+.div.no-bullets {display:none;}
+.message-bubble, .message-bubble-arrow-to-left, .message-bubble-arrow-to-right {background: #f3f3f3;}
+.listing-author-activity {display: none;}
+form .checkbox-container a {text-decoration: underline;}
+.listing-image-thumbnail {border-radius: 100px;}
+.quantity-input {margin-left: -120px;}
+.quantity-wrapper {margin-bottom: 0px;}
+.enabled-book-button {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+
+
+/*Select session field*/
+
+#booking-dates #quantity{
+    width: 1px;
+    height: 0;
+    min-height: 0;
+    padding: 0;
+    visibility: hidden;
+}
+select#sessionLength{
+    height: 40px;
+    font-weight: 600;
+}
 
     /* Flash text - new font family*/
     .ajax-notification .ajax-text, .ajax-notification .flash-text, .flash-notification .ajax-text, .flash-notification .flash-text {
