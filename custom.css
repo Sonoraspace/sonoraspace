@@ -239,7 +239,9 @@ form .checkbox-container a {text-decoration: underline;}
     margin-top: 0px;
 }
 
-
+/*Change filter padding*/
+.custom-filter-options.scrollable {margin-bottom: 10px;}
+.custom-filter-title {padding-bottom: 10px;}
 
 /*Select session field*/
 
