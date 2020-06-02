@@ -162,13 +162,29 @@
 
     /* Round Buttons */
     button, .button, .big-button, .inline-big-button, .tribe-actions, .marketplace-lander button.action-button, .noUi-connect, .pagination .current, .toggle-menu a:hover, .toggle-menu .toggle-menu-link:hover, .badge, .enabled-book-button, .disabled-book-button, .message-book-button, .listing-shape-delete-button, .status-select-line.selected {
-        border-radius: 20px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border-bottom-left-radius: 20px;
+        border-radius: 100px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
     }
 
+    /* Z-Index for mobile menu */
+    .MenuMobile__offScreenMenu__2fKaS {z-index: 101;}
+
+    /*Other changes */
+    .custom-filter-min-max-title {
+    font-family: 'Metropolis';
+    font-size: 15px;
+    }
+   .price-filter-min-value {
+   font-family: 'Metropolis';
+   font-size: 15px;
+   }
+   .custom-filter-options.scrollable {
+   line-height: 1.66666666666667;
+   font-size: 15px;
+   }
 
     /* Hidden home devider */
     .home-toolbar {
