@@ -163,9 +163,9 @@
     /* Round Buttons */
     button, .button, .big-button, .inline-big-button, .tribe-actions, .marketplace-lander button.action-button, .noUi-connect, .pagination .current, .toggle-menu a:hover, .toggle-menu .toggle-menu-link:hover, .badge, .enabled-book-button, .disabled-book-button, .message-book-button, .listing-shape-delete-button, .status-select-line.selected {
         border-radius: 20px;
-        border-top-left-radius: 0px;
+        border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        border-bottom-right-radius: 0px;
+        border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
     }
 
